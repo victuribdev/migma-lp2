@@ -56,6 +56,7 @@ export const GlobalPartner = () => {
         offset: ["start end", "end start"],
     });
 
+
     const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
     const scrollToForm = () => {
@@ -64,12 +65,12 @@ export const GlobalPartner = () => {
     };
 
     return (
-        <div className="min-h-screen bg-white font-sans text-foreground">
-            {/* Wrapper com fundo branco para Header + Hero */}
-            <div className="bg-white">
+        <div className="min-h-screen bg-background font-sans text-foreground">
+            {/* Wrapper com gradiente azul para Header + Hero */}
+            <div style={{ background: "radial-gradient(ellipse 200% 100% at bottom left, #183EC2, #EAEEFE 100%)" }}>
                 {/* Header - Replicado do Template */}
-                <header className="sticky top-0 z-20 bg-white/80 backdrop-blur-sm border-b border-softGray/20">
-                    <div className="flex justify-center items-center py-3 bg-migmaBlack text-white text-sm gap-3">
+                <header className="sticky top-0 z-20">
+                    <div className="flex justify-center items-center py-3 bg-black text-white text-sm gap-3">
                         <p className="text-white/60 hidden md:block">Join our global team and work from anywhere</p>
                         <div className="inline-flex gap-1 items-center cursor-pointer" onClick={scrollToForm}>
                             <p>Apply now</p>
@@ -100,10 +101,10 @@ export const GlobalPartner = () => {
                                 <svg className="h-5 w-5 md:hidden" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path d="M3 12H21M3 6H21M3 18H21" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                                 </svg>
-                                <nav className="hidden md:flex gap-6 text-migmaBlack/60 items-center">
-                                    <a href="#benefits" className="hover:text-migmaBlack transition">Benefits</a>
-                                    <a href="#how-it-works" className="hover:text-migmaBlack transition">How it works</a>
-                                    <a href="#application-form" className="hover:text-migmaBlack transition">Apply</a>
+                                <nav className="hidden md:flex gap-6 text-black/60 items-center">
+                                    <a href="#benefits" className="hover:text-black transition">Benefits</a>
+                                    <a href="#how-it-works" className="hover:text-black transition">How it works</a>
+                                    <a href="#application-form" className="hover:text-black transition">Apply</a>
                                     <button onClick={scrollToForm} className="bg-migmaBlue text-white px-4 py-2 rounded-lg font-medium inline-flex items-center justify-center tracking-tight hover:bg-blue-600 transition">
                                         Get started
                                     </button>
@@ -114,25 +115,25 @@ export const GlobalPartner = () => {
                 </header>
 
                 {/* Section A: Hero - Replicado do Template */}
-                <section
+                < section
                     ref={heroRef}
-                    className="pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip bg-gradient-to-b from-white to-softGray/30"
+                    className="pt-8 pb-20 md:pt-5 md:pb-10 overflow-x-clip"
                 >
                     <div className="container">
                         <div className="md:flex items-center">
                             <div className="md:w-[478px]">
-                                <div className="text-sm inline-flex border border-migmaBlack/10 px-3 py-1 rounded-lg tracking-tight bg-white">
+                                <div className="text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg tracking-tight">
                                     Global Partner Program
                                 </div>
-                                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-migmaBlack to-migmaBlue text-transparent bg-clip-text mt-6">
+                                <h1 className="text-5xl md:text-7xl font-bold tracking-tighter bg-gradient-to-b from-black to-migmaBlue text-transparent bg-clip-text mt-6">
                                     Work with MIGMA from anywhere in the world
                                 </h1>
-                                <p className="text-xl text-migmaBlack/70 tracking-tight mt-6">
+                                <p className="text-xl text-graphiteGray tracking-tight mt-6">
                                     Join the MIGMA Global Partner Program and collaborate with us as a Global Independent Contractor Partner.
                                 </p>
                                 <div className="flex gap-1 items-center mt-[30px]">
-                                    <button onClick={scrollToForm} className="bg-migmaBlue text-white px-6 py-3 rounded-md font-medium hover:bg-blue-600 transition">Apply to Become a Global Partner</button>
-                                    <button className="border border-migmaBlack text-migmaBlack px-6 py-3 rounded-md hover:bg-migmaBlack hover:text-white transition flex gap-1">
+                                    <button onClick={scrollToForm} className="btn btn-primary">Apply to Become a Global Partner</button>
+                                    <button className="btn btn-text flex gap-1">
                                         <span>Learn more</span>
                                     </button>
                                 </div>
@@ -198,10 +199,10 @@ export const GlobalPartner = () => {
                             ))}
                         </div>
                     </div>
-                </section>
+                </section >
 
                 {/* Section D: Application Form */}
-                <section id="application-form" className="gradient-section py-24">
+                < section id="application-form" className="gradient-section py-24" >
                     <div className="container max-w-3xl">
                         <Card className="border-none shadow-2xl bg-white/80 backdrop-blur-sm">
                             <CardContent className="p-8 sm:p-12">
@@ -209,8 +210,8 @@ export const GlobalPartner = () => {
                             </CardContent>
                         </Card>
                     </div>
-                </section>
-            </div>
+                </section >
+            </div >
             );
 };
 
