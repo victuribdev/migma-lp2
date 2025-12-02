@@ -61,6 +61,8 @@ export const GlobalPartner = () => {
     const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return;
+        
         const handleScroll = () => {
             const scrollPosition = window.scrollY;
             setIsScrolled(scrollPosition > 50);
